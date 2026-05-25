@@ -31,8 +31,20 @@ records = [
     {'name': 'bob',   'score': 45, 'year': 1},
     {'name': 'carol', 'score': 73, 'year': 2},
     {'name': 'dave',  'score': 91, 'year': 3},
+    {'name': 'zara', 'score': 88, 'year': 1},
 ]
 
 score_desc = sorted(records, key=lambda record: record['score'], reverse=True)
 top_names = [student['name'] for student in score_desc]
 print(top_names)
+
+filter_records = [record for record in records if record['year'] == 2]
+max_year2 = max(filter_records, key=lambda record: record['score'])
+print(max_year2)
+
+sorted_by_score = sorted(records, key=lambda r: (-r['score'], r['name']))
+print(sorted_by_score)
+
+points = [(3, 4), (1, 1), (5, 12), (0, 0), (8, 6)]
+dist_from_origin = sorted(points, key=lambda point: (point[0]**2 + point[1]**2) ** 0.5)
+print(dist_from_origin)
