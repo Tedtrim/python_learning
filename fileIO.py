@@ -23,3 +23,8 @@ print(word_count)
 print(char_count)
 
 
+with open('sample.txt') as f:
+    for line in f:
+        if len(line.split()) > 5:
+            print(line.strip())
+

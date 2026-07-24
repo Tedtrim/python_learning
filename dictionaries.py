@@ -45,4 +45,16 @@ records = [{'name': 'alice', 'score': 88}, {'name': 'bob', 'score': 45}, {'name'
 comp4 = [student['name'] for student in records if student['score'] >= 50]
 print(comp4)
 
+comp = [x*2 for x in range[10] if x%2 == 0]
 
+def add(item, items=None):
+    if items is None:
+        items = []
+    items.append(item)
+    
+    return items
+        
+letters = ['a', 'b', 'a', 'c', 'b', 'a']
+
+for item in letters:
+    

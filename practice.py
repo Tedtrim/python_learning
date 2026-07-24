@@ -48,3 +48,58 @@ print(sorted_by_score)
 points = [(3, 4), (1, 1), (5, 12), (0, 0), (8, 6)]
 dist_from_origin = sorted(points, key=lambda point: (point[0]**2 + point[1]**2) ** 0.5)
 print(dist_from_origin)
+
+
+nums = [3,4,7,6,2,8]
+
+def has_pair_sum(nms):
+    seen1 = set()
+    for x in nms:
+        if 10 - x in seen:
+            return x, 10 - x
+        seen.add(x)
+    return () 
+        
+
+    
+def first_solo_char(s):
+    chars = {}
+    for char in s:
+        if char in chars:
+            chars[char] += 1
+        else:
+            chars[char] = 1
+
+    for char in s:
+        if chars[char] == 1:
+            return char
+
+    return None
+
+
+def longest_consec_run(nums):
+    seen = set(nums)
+    biggest_run = 0 
+    for num in nums:
+        if num - 1 not in seen:
+            length = 1
+            while num + 1 in seen:
+                num += 1
+                length += 1 
+            if length > biggest_run:
+                biggest_run = length
+
+        
+            
+
+        
+
+            
+
+
+       
+
+        
+
+        
+
