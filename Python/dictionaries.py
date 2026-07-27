@@ -56,5 +56,5 @@ def add(item, items=None):
         
 letters = ['a', 'b', 'a', 'c', 'b', 'a']
 
-for item in letters:
+
     
