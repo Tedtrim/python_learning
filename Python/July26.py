@@ -14,8 +14,6 @@ def square_func(n):
     for x in range(n):
         yield x**2
 
-square_func = (x**2 )
-
 def stripped_lines(filename):
     with open(filename) as f:
         for line in f:
