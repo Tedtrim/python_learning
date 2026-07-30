@@ -18,15 +18,32 @@ def length(head):
 
     return count
 
-
 def reverse(head):
     prev = None
     current = head
 
     while current is not None:
-        next_node = current.next   # rescue the rest of the chain
-        current.next = prev        # repoint backwards
-        prev = current             # move prev up
-        current = next_node        # move current up
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
 
     return prev
+
+def middle(head):
+    slow = head
+    fast = head
+
+    while fast is not None and fast.next is not None:
+        slow = slow.next
+        fast = fast.next.next
+        
+    return slow
+
+
+
+
+
+
+
+
