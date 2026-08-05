@@ -29,3 +29,16 @@ def fibonacci():
 
 
 
+def gen(): yield 1
+
+print(gen())
+
+def logged(foo):
+    def wrapper(*args, **kwargs):
+        return foo()
+    return wrapper
+ 
+@logged
+def foo(*args, **kwargs):
+    print(*args, **kwargs)
+    

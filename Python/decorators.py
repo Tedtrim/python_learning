@@ -29,4 +29,3 @@ def greet_person(name):
 
 print(greet_person("Ted"))
 print(greet())
-

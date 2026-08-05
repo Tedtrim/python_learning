@@ -52,13 +52,6 @@ print(dist_from_origin)
 
 nums = [3,4,7,6,2,8]
 
-def has_pair_sum(nms):
-    seen1 = set()
-    for x in nms:
-        if 10 - x in seen:
-            return x, 10 - x
-        seen.add(x)
-    return () 
         
 
     
@@ -77,19 +70,10 @@ def first_solo_char(s):
     return None
 
 
-def longest_consec_run(nums):
-    seen = set(nums)
-    biggest_run = 0 
-    for num in nums:
-        if num - 1 not in seen:
-            length = 1
-            while num + 1 in seen:
-                num += 1
-                length += 1 
-            if length > biggest_run:
-                biggest_run = length
 
-        
+
+
+
             
 
         
