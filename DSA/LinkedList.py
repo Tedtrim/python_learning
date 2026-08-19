@@ -45,5 +45,3 @@ def middle(head):
 
 
 
-
-

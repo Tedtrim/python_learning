@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 squares = [x ** 2 for x in range(10)]
 total = sum(squares)
 first_three = squares[0:4]
@@ -8,18 +10,16 @@ print(first_three)
 
 import string
 
-counts = {}
+word_counts = defaultdict(int)
 top_10 = {}
 
 with open('sample.txt') as f:
-    for line in f:
+    for line in f:        
         for word in line.split():
             word = word.strip(string.punctuation).lower()
-            if word not in counts:
-                counts[word] = 0
-            counts[word] += 1
+            word_counts[word] += 1
 
-ranked = sorted(counts.items(), key=lambda item: item[1], reverse=True)
+ranked = sorted(word_counts.items(), key=lambda item: item[1], reverse=True)
 top_10 = ranked[:10]
 
 
