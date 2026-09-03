@@ -33,12 +33,22 @@ def reverse(head):
 def middle(head):
     slow = head
     fast = head
-
-    while fast is not None and fast.next is not None:
+    while fast is not None and fast.next is not None and fast.next.next is not None:
         slow = slow.next
         fast = fast.next.next
         
+    return slow 
+
+def middle(head):
+    slow = head
+    fast = head
+    while fast is not None and fast.next is not None:
+        slow = slow.next
+        fast = fast.next.next
+
     return slow
+
+    
 
 
 

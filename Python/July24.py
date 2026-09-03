@@ -11,7 +11,6 @@ print(first_three)
 import string
 
 word_counts = defaultdict(int)
-top_10 = {}
 
 with open('sample.txt') as f:
     for line in f:        
@@ -21,6 +20,5 @@ with open('sample.txt') as f:
 
 ranked = sorted(word_counts.items(), key=lambda item: item[1], reverse=True)
 top_10 = ranked[:10]
-
 
 print(top_10)
