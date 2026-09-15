@@ -13,17 +13,6 @@ def removeNthFromEnd(self, head, n):
     current2.next = current2.next.next
     return current2.next
 
-def reverse(head):
-    prev = None 
-    current = head
-
-    while current is not None:
-        next_node = current
-        current.next = prev
-        prev = current 
-        current.next = next_node
-
-    return prev
 
 def middle(head):
     fast = head
@@ -35,3 +24,14 @@ def middle(head):
 
     return slow
 
+def reverse(head):
+    current = head
+    prev = None
+
+    while current is not None:
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
+
+    return prev
